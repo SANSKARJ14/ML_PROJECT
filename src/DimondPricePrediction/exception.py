@@ -5,6 +5,9 @@ class customException(Exception):
         self.error_message = error_message
         _,_,exc_tb = error_details.exc_info()
         
+        #FROM EXE_INFO WE GET OBJECT ADDRESS FROM THAT ADDRESS WE CAN METHOD,CLASS EVERY_INFORMATION THAT"S WHY IN 
+        # BELOW CODE WE USE METHOD LIKE TB_LINENO AND FILE_NAME 
+        
         self.lineno=exc_tb.tb_lineno
         self.file_name=exc_tb.tb_frame.f_code.co_filename 
 
